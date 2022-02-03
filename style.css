@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background-image: url('img/bg-img.jpg') no-repeat center center cover;
+  background-color: #252839;
+  /* background: #333; */
+  color: #ccc;
+}
+
+/* Navigation */
+.navigation {
+  /* background: #161822; */
+  display: flex;
+  justify-content: space-between;
+}
+.navigation li {
+  list-style-type: none;
+}
+
+.profile-photo {
+  width: 10rem;
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  border-radius: 10rem;
+  height: 10rem;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 2.5rem;
+  text-decoration: none;
+  margin-right: 2.5rem;
+}
+
+.nav-link:hover {
+  color: #da5252;
+}
+
+.hr-line {
+  border: 1px dotted gray;
+}
+
+.intro-msg {
+  font-size: 4rem;
+  margin-left: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: auto; */
+  padding: 0 1.6rem;
+}
+
+h1,
+h2 {
+  font-weight: 200;
+  margin: 0.4rem;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+.experience h2 {
+  font-size: 4rem;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+/*  Cursor */
+.txt-type .txt {
+  padding: 0 0.5rem;
+  font-size: 8rem;
+  font-weight: 900;
+  color: #e6264c;
+}
+
+.txt::after{
+  content: '';
+  padding-left: .5rem;
+  border-right: 0.5rem solid gray;
+  
+
+}
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  flex-direction: row;
+}
+.experience {
+  margin-left: 2rem;
+  width: 60vw;
+  color: rgb(190, 189, 189);
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.experience p {
+  width: 90%;
+}
+
+.projects-link {
+  color: crimson;
+}
+
+.projects-link:hover {
+  filter: brightness(120%);
+}
+
+/* SLIDER */
+
+.carousel {
+  margin-top: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 250px;
+  width: 400px;
+  margin-right: 2rem;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.image-container {
+  display: flex;
+  /* moving it along the x axis */
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.img button {
+  width: 40rem;
+}
+
+.img a {
+  text-decoration: none;
+  color: #da5252;
+  font-size: 5rem;
+}
+
+
+.circle {
+  width: 12rem;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  animation: bounce 50s linear infinite;
+}
+
+
+@keyframes bounce {
+  0% {
+    color: skyblue;
+    right: 0;
+    top: 1rem;
+  }
+
+  50% {
+    right: 1150px;
+    top:1rem;
+  }
+
+  100%{
+    right: 0
+    color:gray
+    top:1rem;
+  }
+}
+
+
+/* media queries */
+@media (max-width: 1024px) {
+  .txt-type .txt {
+    font-size: 6rem;
+  }
+  .container h1{
+    line-height: 8rem;
+  }
+  .projects-container {
+    flex-direction: column;
+  }
+  .experience{
+    width: 100%;
+  }
+  .carousel{
+    align-self: center;
+  }
+  .profile-photo{
+  
+    height: 10rem;
+  }
+}
+@media(max-width: 480px){
+        
+    .nav-links {
+      flex-direction: column;
+    }
+    .nav-link{
+      font-size: 2rem;
+    }
+     .txt-type .txt {
+    font-size: 4rem;
+  }
+    .intro-msg{
+      font-size: 2rem;
+    }
+
+    .carousel{
+      width: 95%;
+      margin: 2rem 0;
+    }
+
+    .experience h2{
+      font-size: 3rem;
+    }
+    
+  }
